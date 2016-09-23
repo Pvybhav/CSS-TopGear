@@ -1,26 +1,29 @@
 <html>
 <head>
 <title>Scenario-3</title>
+<style>
+</style>
 </head>
 <body>
 	<ul id="ul">
+		<li>324255</li>
 		<li>323647</li>
 		<li>323664</li>
 		<li>323093</li>
 		<li>323106</li>
 		<li>323313</li>
-		<li>324255</li>
-		<li>323625</li>
 		<li>322222342345</li>
 		<li>3234543242</li>
 		<li>23233232</li>
+		<li>323625</li>
+
 	</ul>
 	<script>
-		var nums = document.getElementById("ul");
-		var listItem = nums.getElementsByTagName("li");
+		var unorderedlist = document.getElementById("ul");
+		var listItem = unorderedlist.getElementsByTagName("li");
 
 		var newNums = [];
-		alert(listItem.length);
+		//alert(listItem.length);
 
 		for (var i = 0; i < listItem.length; i++) {
 			newNums.push(parseInt(listItem[i].innerHTML));
@@ -33,12 +36,14 @@
 				//alert(listItem[i].id);
 				//alert("no is" + no);
 				document.getElementsByTagName("li")[i].setAttribute("id", no);
-				highlight(listItem[i].id, 'magenta');
+				highlight(listItem[i].id, 'blue');
 			}
 		}
 		function highlight(name, color) {
 			var a = document.getElementById(name);
-			a.style.color = color;
+			a.style.background = color;//for background color
+			a.style.color = "yellow";//for foreground color
+			a.style.fontSize = "30px";//for increasing font size
 		}
 	</script>
 </body>
